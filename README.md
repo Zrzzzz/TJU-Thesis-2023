@@ -33,9 +33,6 @@
 ```tex
 宋体 \song
 黑体 \hei
-宋体加粗 \bfsong
-黑体加粗 \bfhei
-
 ```
 ### 引用
 #### BibTeX
