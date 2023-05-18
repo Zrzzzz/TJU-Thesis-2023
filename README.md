@@ -9,7 +9,12 @@
 + 对字号进行了调整
 + 对于中文字体没有粗体的问题，宋体加粗和黑体加粗使用了思源字体
 + 增加了翻译的模板，翻译模板更适应IEEE等外文文献
++ 兼容overleaf
++ 更新至2023最新模板
 
+## overleaf字数统计
+
+将`main.tex`中的`\include{include/body}`改为`\include{thesis/include/body}`
 ## 预览
 [天津大学本科生毕业论文](https://github.com/Checkmate986212/TJU-Thesis-2020/blob/master/TJU-thesis-template-2020/main.pdf)
 
