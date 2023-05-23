@@ -7,6 +7,10 @@
 
 \newcommand{\hei}{\heiti}
 \newcommand{\song}{\songti}
+\setCJKfamilyfont{zhsong}[AutoFakeBold = {2.57}]{SimSun}    % 加粗宋体
+\setCJKfamilyfont{zhhei}[AutoFakeBold = {1.87}]{SimHei}		% 加粗黑体
+\renewcommand*{\songti}{\CJKfamily{zhsong}}
+\renewcommand*{\heiti}{\CJKfamily{zhhei}}
 \newcommand{\yihao}{\fontsize{26pt}{26pt}\selectfont}       % 一号, 单倍行距
 \newcommand{\xiaoyi}{\fontsize{24pt}{24pt}\selectfont}      % 小一, 单倍行距
 \newcommand{\erhao}{\fontsize{22pt}{1.25\baselineskip}\selectfont}       % 二号, 1.25倍行距
@@ -75,19 +79,19 @@
 %\titlecontents{chapter}[2em]{\vspace{.5\baselineskip}\xiaosan\song}
              %{\prechaptername\CJKnumber{\thecontentslabel}\postchaptername\qquad}{}
              %{\hspace{.5em}\titlerule*[10pt]{$\cdot$}\sihao\contentspage}
-\titlecontents{chapter}[2em]{\vspace{.25\baselineskip}\xiaosi\hei}
+\titlecontents{chapter}[2em]{\vspace{.25\baselineskip}\xiaosi\heiti}
              {\thecontentslabel\quad\xiaosi\song}{}
              {\titlerule*[5pt]{.}\xiaosi\contentspage}
 
-\titlecontents{section}[4em]{\vspace{.25\baselineskip}\sffamily\hei}
+\titlecontents{section}[4em]{\vspace{.25\baselineskip}\sffamily\heiti}
              {\thecontentslabel\quad\xiaosi\song}{}
              {\titlerule*[5pt]{.}\xiaosi\contentspage}
 
-\titlecontents{subsection}[5em]{\vspace{.25\baselineskip}\sffamily\hei}
+\titlecontents{subsection}[5em]{\vspace{.25\baselineskip}\sffamily\heiti}
              {\thecontentslabel\quad\xiaosi\song}{}
              {\titlerule*[5pt]{.}\xiaosi\contentspage}
 
-\titlecontents{other}[2em]{\vspace{.25\baselineskip}\xiaosi\song}
+\titlecontents{other}[2em]{\vspace{.25\baselineskip}\xiaosi\songti}
              {\thecontentslabel\quad\xiaosi\song}{}
              {\titlerule*[5pt]{.}\xiaosi\contentspage}
 
@@ -96,24 +100,17 @@
 \setlength{\parindent}{2em}
 \renewcommand{\chaptername}{\prechaptername\CJKnumber{\thechapter}\postchaptername}
 
-\titleformat{\chapter}{\centering\xiaosan\hei}{\chaptername}{2em}{}
-\titlespacing{\chapter}{0pt}{0.1\baselineskip}{0.8\baselineskip}
+\titleformat{\chapter}{\centering\xiaosan\heiti}{\chaptername}{2em}{}
+\titlespacing{\chapter}{0pt}{0.1\baselineskip}{1.25\baselineskip}
 
-\titleformat{\section}{\sihao\sffamily}{\thesection}{1em}{}
-\titlespacing{\section}{0pt}{0.15\baselineskip}{0.25\baselineskip}
+\titleformat{\section}{\sihao\sffamily\heiti}{\thesection}{1em}{}
+\titlespacing{\section}{0pt}{0.88\baselineskip}{0.88\baselineskip}
 
-\titleformat{\subsection}{\sihao\sffamily}{\thesubsection}{1em}{}
-\titlespacing{\subsection}{0pt}{0.1\baselineskip}{0.3\baselineskip}
+\titleformat{\subsection}{\sihao\sffamily\heiti}{\thesubsection}{1em}{}
+\titlespacing{\subsection}{0pt}{0.625\baselineskip}{0.625\baselineskip}
 
-\titleformat{\subsubsection}{\sihao\sffamily}{\thesubsubsection}{1em}{}
+\titleformat{\subsubsection}{\sihao\heiti}{\thesubsubsection}{1em}{}
 \titlespacing{\subsubsection}{0pt}{0.05\baselineskip}{0.1\baselineskip}
-
-
-\newcommand{\trtitle}[1]{\vspace{12pt}\begin{center}{\xiaoer\hei\bf #1}\end{center}}
-\newcommand{\trabs}[1]{\vspace{6pt}{\begin{center}{\xiaosan\hei #1}\end{center}}}
-\newcommand{\trchapter}[1]{\vspace{6pt}{\raggedright\xiaosan\hei #1}}%%\newline}
-\newcommand{\trsection}[1]{\vspace{4pt}{\raggedright\sihao\hei #1}}%%%\newline}
-\newcommand{\trsubsection}[1]{\vspace{2pt}{\raggedright\sihao\hei\it #1}}%%%\newline}
 
 %%%%%%%%%% Table, Figure and Equation %%%%%%%%%%%%%%%%%
 \renewcommand{\tablename}{表}                                     % 插表题头
@@ -129,7 +126,7 @@
 \makeatletter
 \long\def\@makecaption#1#2{
    \vskip\abovecaptionskip
-   \sbox\@tempboxa{\centering\wuhao\song{#1\qquad #2} }
+   \sbox\@tempboxa{\centering\wuhao\song{#1\quad #2} }
    \ifdim \wd\@tempboxa >\hsize
 %     \centering\wuhao\song{#1\qquad #2} \par
      \wuhao\song{#1\quad #2} \par
@@ -280,7 +277,7 @@
 			\vspace*{24pt}
 			  			
   			\renewcommand\arraystretch{1.5}
-  			\setlength{\@title@width}{5cm}{\sanhao\song{\bf{
+  			\setlength{\@title@width}{5cm}{\sanhao\songti{\textbf{
     			\begin{tabular}{lc}
       				学\qquad 院&	\underline{\makebox[\@title@width][c]{\@caffil}}	\\
       				专\qquad 业&	\underline{\makebox[\@title@width][c]{\@csubject}}	\\
@@ -303,7 +300,7 @@
 	\clearpage
 	\markboth{独创性声明}{独创性声明}
 	\pdfbookmark[0]{独创性声明}{cindependent}
-	\chapter*{\textbf{独创性声明}}
+	\chapter*{\songti\erhao\textbf{独创性声明}}
 	\song\sanhao\defaultfont
 	\@cindependent
 	\vspace{\baselineskip}
@@ -323,7 +320,7 @@
 	\@cabstract
 	\vspace{\baselineskip}
 
-	\hangafter=1\hangindent=55pt
+	% \hangafter=1\hangindent=55pt
 	\noindent
 	{\sihao\textbf{关键词：}} \@ckeywords %%%%%跟原文空一行小四12pt
 	\thispagestyle{plain}
@@ -337,7 +334,8 @@
 	\@eabstract
 	\vspace{\baselineskip}
 
-	\hangafter=1\hangindent=81pt\noindent %%这个hangindent是为了下一行同样在keywords后边
+	% \hangafter=1\hangindent=81pt %%这个hangindent是为了下一行同样在keywords后边
+	\noindent
 	{\textbf{KEY WORDS:}} \@ekeywords 
 	\thispagestyle{plain}
 }
