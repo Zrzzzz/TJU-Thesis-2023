@@ -97,16 +97,16 @@
 \renewcommand{\chaptername}{\prechaptername\CJKnumber{\thechapter}\postchaptername}
 
 \titleformat{\chapter}{\centering\xiaosan\hei}{\chaptername}{2em}{}
-\titlespacing{\chapter}{0pt}{0.1\baselineskip}{0.8\baselineskip}
+\titlespacing{\chapter}{0pt}{.1\baselineskip}{1.25\baselineskip}
 
-\titleformat{\section}{\sihao\sffamily}{\thesection}{1em}{}
-\titlespacing{\section}{0pt}{0.15\baselineskip}{0.25\baselineskip}
+\titleformat{\section}{\sihao\hei}{\thesection}{1em}{}
+\titlespacing{\section}{0pt}{.88\baselineskip}{.88\baselineskip}
 
-\titleformat{\subsection}{\sihao\sffamily}{\thesubsection}{1em}{}
-\titlespacing{\subsection}{0pt}{0.1\baselineskip}{0.3\baselineskip}
+\titleformat{\subsection}{\sihao\hei}{\thesubsection}{1em}{}
+\titlespacing{\subsection}{0pt}{.625\baselineskip}{.625\baselineskip}
 
-\titleformat{\subsubsection}{\sihao\sffamily}{\thesubsubsection}{1em}{}
-\titlespacing{\subsubsection}{0pt}{0.05\baselineskip}{0.1\baselineskip}
+\titleformat{\subsubsection}{\sihao\hei}{\thesubsubsection}{1em}{}
+\titlespacing{\subsubsection}{0pt}{.05\baselineskip}{.1\baselineskip}
 
 
 \newcommand{\trtitle}[1]{\vspace{12pt}\begin{center}{\xiaoer\hei\bf #1}\end{center}}
@@ -303,7 +303,7 @@
 	\clearpage
 	\markboth{独创性声明}{独创性声明}
 	\pdfbookmark[0]{独创性声明}{cindependent}
-	\chapter*{\textbf{独创性声明}}
+	\chapter*{\song\erhao\textbf{独创性声明}}
 	\song\sanhao\defaultfont
 	\@cindependent
 	\vspace{\baselineskip}
@@ -323,7 +323,7 @@
 	\@cabstract
 	\vspace{\baselineskip}
 
-	\hangafter=1\hangindent=55pt
+	% \hangafter=1\hangindent=55pt
 	\noindent
 	{\sihao\textbf{关键词：}} \@ckeywords %%%%%跟原文空一行小四12pt
 	\thispagestyle{plain}
@@ -337,7 +337,8 @@
 	\@eabstract
 	\vspace{\baselineskip}
 
-	\hangafter=1\hangindent=81pt\noindent %%这个hangindent是为了下一行同样在keywords后边
+	% \hangafter=1\hangindent=81pt\noindent %%这个hangindent是为了下一行同样在keywords后边
+     \noindent
 	{\textbf{KEY WORDS:}} \@ekeywords 
 	\thispagestyle{plain}
 }
